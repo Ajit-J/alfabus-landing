@@ -91,7 +91,20 @@
         const token = urlParams.get('token');
 
         if (!token) {
-            showStatus('Error: Invalid session. Please initiate deletion directly from the AlfaBus app.', 'error');
+            // Hide the standard delete button
+            btn.classList.add('hidden'); 
+            
+            // Show a manual email request fallback for Google Play compliance
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `
+                <div style="color: #2c3e50; font-weight: normal; margin-bottom: 15px;">
+                    To request account deletion without the app, please email our support team from your registered email address or provide your registered phone number.
+                </div>
+                <a href="mailto:support@alfabus.app?subject=Account%20Deletion%20Request" 
+                   style="display: inline-block; width: 100%; padding: 14px; background-color: #34495e; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; box-sizing: border-box;">
+                   Email Support to Delete Account
+                </a>
+            `;
             return;
         }
 
