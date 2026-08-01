@@ -1,36 +1,220 @@
-<div class="alfabus-refund-policy">
-  <h2>Alfabus Cancellation and Refund Policy</h2>
-  <p><strong>Last Updated:</strong> 01 Aug 2026 </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - Alfabus Mobility</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafbfd;
+            color: #1a253c;
+            line-height: 1.7;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .brand img {
+            height: 55px; 
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+        .btn-back-nav {
+            background: #112277;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-back-nav:hover {
+            background: #1a33aa;
+        }
 
-  <h3>1. Role of Alfabus</h3>
-  <p>Alfabus acts strictly as an online ticket aggregator and technology platform. We do not operate buses, nor do we employ bus staff. Our sole responsibility is to provide a platform connecting passengers with independent bus operators. Alfabus shall not be held liable for delayed departures, poor service quality, baggage loss, or cancellations initiated by the bus operator.</p>
+        /* Content Container */
+        .legal-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+        }
 
-  <h3>2. Cancellation Rules</h3>
-  <p>Cancellation charges and refund eligibility are determined entirely by the specific bus operator’s policy, which is displayed to you at the time of booking. By proceeding with a booking, you agree to the operator's specific terms.</p>
-  <ul>
-    <li>Cancellations must be made through the Alfabus app or website before the designated cut-off time.</li>
-    <li>No cancellations or refunds are permitted after the bus has departed its first boarding point.</li>
-    <li>If a passenger fails to report to the boarding point on time (No-Show), no refund will be issued.</li>
-  </ul>
+        .legal-header {
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .legal-header h1 {
+            font-size: 32px;
+            color: #0c1a57;
+            margin: 0 0 10px 0;
+            font-weight: 800;
+        }
+        .last-updated {
+            font-size: 14px;
+            color: #64748b;
+            font-weight: 600;
+        }
 
-  <h3>3. Non-Refundable Charges</h3>
-  <p>The following charges are strictly non-refundable under any circumstances, including operator-initiated cancellations:</p>
-  <ul>
-    <li>Alfabus Convenience Fees / Platform Fees.</li>
-    <li>Taxes and payment gateway charges.</li>
-    <li>Fees paid for premium add-ons (e.g., priority support).</li>
-    <li>Any promotional discounts or cashback applied during booking.</li>
-  </ul>
+        .legal-content h2 {
+            font-size: 20px;
+            color: #0c1a57;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
 
-  <h3>4. Refunds for Operator Cancellations</h3>
-  <p>If a bus operator cancels a scheduled service and fails to provide an alternative, passengers are eligible for a refund of the ticket base fare. Passengers must notify Alfabus within 24 hours of the scheduled departure to initiate this claim. Alfabus is not responsible for any incidental expenses (e.g., hotel, secondary travel) incurred due to the cancellation.</p>
+        .legal-content p {
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 16px;
+        }
 
-  <h3>5. Refund Processing Time</h3>
-  <p>Approved refunds are processed back to the original method of payment. The processing timeframe typically takes 5 to 7 business days, depending on your bank or payment issuer.</p>
+        .legal-content ul {
+            margin: 0 0 20px 0;
+            padding-left: 20px;
+        }
 
-  <h3>6. Limitation of Liability</h3>
-  <p>Under no circumstances shall Alfabus's total liability for any claim, dispute, or issue exceed the base ticket fare paid by the user. Alfabus shall not be liable for any indirect, punitive, or consequential damages arising from the use of our platform.</p>
+        .legal-content li {
+            font-size: 15px;
+            color: #334155;
+            margin-bottom: 8px;
+        }
 
-  <h3>7. Governing Law and Jurisdiction</h3>
-  <p>These terms are governed by the laws of India. Any disputes arising out of or related to ticketing, cancellations, or refunds shall be subject to the exclusive jurisdiction of the courts located in [Insert Your City/State, e.g., Pune, Maharashtra].</p>
-</div>
+        /* Footer */
+        footer {
+            background: #090f26;
+            color: #94a3b8;
+            padding: 40px 5%;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            margin-top: 60px;
+        }
+        .copyright {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .footer-links {
+            font-size: 13px;
+        }
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .legal-container {
+                margin: 20px;
+                padding: 25px;
+            }
+            .legal-header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="brand">
+            <a href="index.html">
+                <img src="AlfabusLogo.png" alt="Alfabus Logo" onerror="this.src='https://via.placeholder.com/150x55.png?text=Alfabus'">
+            </a>
+        </div>
+        <div>
+            <a href="index.html" class="btn-back-nav">&#8592; Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Main Legal Content -->
+    <main class="legal-container">
+        <div class="legal-header">
+            <h1>Cancellation and Refund Policy</h1>
+            <div class="last-updated">Last Updated: August 01, 2026</div>
+        </div>
+
+        <div class="legal-content">
+            <p>This Cancellation and Refund Policy outlines the terms and conditions regarding ticket cancellations and refunds for services booked through Alfabus Mobility. By booking a ticket on our platform, you agree to the terms specified herein.</p>
+
+            <h2>1. Role of Alfabus</h2>
+            <p>Alfabus acts strictly as an online ticket aggregator and technology platform[cite: 3]. We connect passengers with independent bus operators and do not operate buses or employ bus staff[cite: 3]. Our responsibility is limited to facilitating the booking process[cite: 3]. Alfabus shall not be held liable for delayed departures, service quality, baggage issues, or cancellations initiated by the bus operator[cite: 3].</p>
+
+            <h2>2. Cancellation Rules</h2>
+            <p>Cancellation charges and refund eligibility are determined entirely by the specific bus operator’s policy, which is displayed to you at the time of booking[cite: 3]. By proceeding with a booking, you agree to the operator's specific terms[cite: 3].</p>
+            <ul>
+                <li>Cancellations must be made through the Alfabus app or website before the designated cut-off time specified by the operator[cite: 3].</li>
+                <li>No cancellations or refunds are permitted after the bus has departed its first boarding point[cite: 3].</li>
+                <li>If a passenger fails to report to the boarding point on time (No-Show), the ticket will be treated as utilized, and no refund will be issued[cite: 3].</li>
+            </ul>
+
+            <h2>3. Non-Refundable Charges</h2>
+            <p>The following charges are strictly non-refundable under any circumstances, including operator-initiated cancellations[cite: 3]:</p>
+            <ul>
+                <li>Alfabus Convenience Fees / Platform Fees[cite: 3].</li>
+                <li>Taxes and payment gateway charges[cite: 3].</li>
+                <li>Fees paid for premium add-ons (e.g., priority support)[cite: 3].</li>
+                <li>Any promotional discounts or cashback applied during booking[cite: 3].</li>
+            </ul>
+
+            <h2>4. Refunds for Operator Cancellations</h2>
+            <p>If a bus operator cancels a scheduled service and fails to provide an alternative, passengers are eligible for a refund of the ticket base fare[cite: 3]. Passengers must notify Alfabus within 24 hours of the scheduled departure to initiate this claim[cite: 3]. Alfabus is not responsible for any incidental expenses (e.g., hotel, secondary travel) incurred due to the cancellation[cite: 3].</p>
+
+            <h2>5. Refund Processing Time</h2>
+            <p>Approved refunds are processed back to the original method of payment[cite: 3]. The processing timeframe typically takes 5 to 7 business days, depending on your bank or payment issuer[cite: 3].</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>Under no circumstances shall Alfabus's total liability for any claim, dispute, or issue exceed the base ticket fare paid by the user[cite: 3]. Alfabus shall not be liable for any indirect, punitive, or consequential damages arising from the use of our platform[cite: 3].</p>
+
+            <h2>7. Governing Law and Jurisdiction</h2>
+            <p>These terms are governed by the laws of India[cite: 3]. Any disputes arising out of or related to ticketing, cancellations, or refunds shall be subject to the exclusive jurisdiction of the courts located in Pune, Maharashtra[cite: 3].</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            &copy; 2026 Alfabus Mobility. All rights reserved.
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="refund-policy.html">Refund Policy</a>
+            <a href="mailto:support@alfabus.app">Contact Support</a>
+        </div>
+    </footer>
+
+</body>
+</html>
