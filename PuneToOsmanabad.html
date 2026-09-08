@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pune to Osmanabad Bus Tickets | Alfabus</title>
-    <meta name="description" content="Book Pune to Osmanabad bus tickets on Alfabus. Check timetables, compare prices, and book AC & Sleeper buses instantly.">
+    <title>Pune to Osmanabad Bus Booking | Ticket Price & Timings - Alfabus</title>
+    <meta name="description" content="Book Alfabus AC Sleeper & Seater tickets from Pune to Osmanabad. Check daily bus schedules, ticket fares, Swargate/Wakad boarding points, and seat availability.">
+    
+    <!-- BusTrip Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BusTrip",
+      "name": "Pune to Osmanabad Bus Service",
+      "provider": {
+        "@type": "Organization",
+        "name": "Alfabus",
+        "url": "https://www.alfabus.app"
+      },
+      "departureBusStop": {
+        "@type": "BusStop",
+        "name": "Swargate, Pune"
+      },
+      "arrivalBusStop": {
+        "@type": "BusStop",
+        "name": "Osmanabad Bus Stand"
+      },
+      "departureTime": "22:00:00",
+      "offers": {
+        "@type": "Offer",
+        "price": "550",
+        "priceCurrency": "INR",
+        "url": "https://www.alfabus.app/PuneToOsmanabad.html"
+      }
+    }
+    </script>
+
     <style>
         *, *::before, *::after { box-sizing: border-box; }
         body {
@@ -13,7 +43,7 @@
             background-color: #fafbfd; color: #1a253c; line-height: 1.6;
         }
         
-        /* Navigation (Inherited from index.html) */
+        /* Navigation */
         nav {
             background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             padding: 15px 5%; display: table; width: 100%;
@@ -44,14 +74,52 @@
             font-size: 18px; color: #4a5568; margin-bottom: 35px; max-width: 700px;
         }
 
-        /* Route Info Grid */
-        .features { padding: 60px 5%; background: #ffffff; text-align: center; }
+        /* Section Containers */
+        .section-container { padding: 60px 5%; }
+        .bg-white { background: #ffffff; }
+        .bg-light { background: #f8fafc; }
+        .section-title { color: #0c1a57; font-size: 32px; margin-bottom: 30px; text-align: center; font-weight: 700; }
+
+        /* Timings & Price Table */
+        .table-wrapper { overflow-x: auto; margin-top: 20px; }
+        .schedule-table {
+            width: 100%; border-collapse: collapse; background: #ffffff;
+            border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .schedule-table th, .schedule-table td {
+            padding: 16px 20px; text-align: left; border-bottom: 1px solid #edf2f7;
+        }
+        .schedule-table th { background: #112277; color: #ffffff; font-weight: 600; }
+        .schedule-table tr:hover { background: #f1f5f9; }
+        .btn-book-sm {
+            background: #112277; color: #ffffff; padding: 6px 14px;
+            text-decoration: none; border-radius: 15px; font-size: 13px; font-weight: 600;
+        }
+
+        /* Boarding & Dropping Grid */
+        .points-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; margin-top: 20px;
+        }
+        .point-card {
+            background: #ffffff; padding: 25px; border-radius: 10px;
+            border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .point-card h3 { color: #112277; font-size: 20px; margin-top: 0; margin-bottom: 15px; }
+        .point-list { list-style: none; padding: 0; margin: 0; }
+        .point-list li {
+            padding: 8px 0; border-bottom: 1px dashed #e2e8f0;
+            display: flex; justify-content: space-between; font-size: 15px;
+        }
+        .point-list li:last-child { border-bottom: none; }
+
+        /* Route Features Grid */
         .features-grid {
             display: table; width: 100%; table-layout: fixed;
             border-collapse: separate; border-spacing: 20px 0;
         }
         .feature-card {
-            display: table-cell; background: #f8fafc; padding: 35px 25px;
+            display: table-cell; background: #ffffff; padding: 35px 25px;
             border-radius: 12px; text-align: center; vertical-align: top;
             border: 1px solid #edf2f7;
         }
@@ -62,6 +130,15 @@
         }
         .feature-card h3 { font-size: 18px; color: #1a253c; margin-bottom: 12px; }
         .feature-card p { font-size: 14px; color: #64748b; margin: 0; }
+
+        /* FAQ Section */
+        .faq-grid { max-width: 900px; margin: 0 auto; }
+        .faq-item {
+            background: #ffffff; border: 1px solid #e2e8f0;
+            border-radius: 8px; margin-bottom: 15px; padding: 20px;
+        }
+        .faq-item h3 { font-size: 17px; color: #0c1a57; margin: 0 0 10px 0; }
+        .faq-item p { margin: 0; font-size: 15px; color: #4a5568; }
 
         /* Call To Action */
         .cta {
@@ -98,33 +175,122 @@
         </div>
     </nav>
 
+    <!-- H1: Optimized Heading -->
     <header class="hero">
-        <h1>Pune to Osmanabad Bus Tickets</h1>
-        <p>Book your smart journey from Pune to Osmanabad. Experience safe travel, ultra-comfortable rides, on-time performance, and completely seamless bus ticket booking right from your Android device.</p>
+        <h1>Pune to Osmanabad Bus Ticket Booking</h1>
+        <p>Book your smart journey from Pune to Osmanabad. Experience safe travel, ultra-comfortable AC Sleeper & Seater rides, on-time performance, and seamless ticket booking directly on Alfabus.</p>
         <a href="https://play.google.com/store/apps/details?id=com.alfabus.app" class="btn-download-nav" style="display:inline-block; font-size: 18px; padding: 15px 30px;">Check Availability in App</a>
     </header>
 
-    <section class="features">
-        <h2 style="color: #0c1a57; font-size: 32px; margin-bottom: 40px;">Pune to Osmanabad Route Information</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon-circle">🛣️</div>
-                <h3>Distance & Time</h3>
-                <p>Approximately 260 km. The journey typically takes 5 to 6 hours depending on traffic and boarding points.</p>
+    <!-- H2: Timings & Prices Table Section -->
+    <section class="section-container bg-white">
+        <h2 class="section-title">Alfabus Timings & Ticket Prices</h2>
+        <div class="table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Bus Type</th>
+                        <th>Starting Fare</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>21:30</strong> (Wakad)</td>
+                        <td>03:30 (Osmanabad)</td>
+                        <td>AC Sleeper (2+1)</td>
+                        <td>₹550</td>
+                        <td><a href="https://play.google.com/store/apps/details?id=com.alfabus.app" class="btn-book-sm" target="_blank">Book Seat</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>22:15</strong> (Swargate)</td>
+                        <td>04:15 (Osmanabad)</td>
+                        <td>Luxury AC Sleeper</td>
+                        <td>₹600</td>
+                        <td><a href="https://play.google.com/store/apps/details?id=com.alfabus.app" class="btn-book-sm" target="_blank">Book Seat</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>23:00</strong> (Hadapsar)</td>
+                        <td>05:00 (Osmanabad)</td>
+                        <td>Non-AC Sleeper / Seater</td>
+                        <td>₹450</td>
+                        <td><a href="https://play.google.com/store/apps/details?id=com.alfabus.app" class="btn-book-sm" target="_blank">Book Seat</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- H2: Boarding & Dropping Points Section -->
+    <section class="section-container bg-light">
+        <h2 class="section-title">Boarding & Dropping Points in Pune and Osmanabad</h2>
+        <div class="points-grid">
+            <div class="point-card">
+                <h3>📍 Pune Boarding Points</h3>
+                <ul class="point-list">
+                    <li><span>Bhosri Opp Shital Bagh</span> <span>21:30</span></li>
+                    <li><span>Kalewadi Opp Kunal Hotel</span> <span>22:20</span></li>
+                    <li><span>Rakshak Chowk</span> <span>22:40</span></li>
+                    <li><span>Swargate Sana Parking</span> <span>23:30</span></li>
+                    <li><span>Hadapsar (Gadital)</span> <span>00:00</span></li>
+                </ul>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon-circle">💺</div>
-                <h3>Bus Types</h3>
-                <p>Choose from Premium AC Sleeper, Non-AC Sleeper, and Seater buses available throughout the day and night.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon-circle">📍</div>
-                <h3>Top Boarding Points</h3>
-                <p>Swargate, Shivaji Nagar, Hadapsar, and Wakad are the most popular boarding locations in Pune.</p>
+            <div class="point-card">
+                <h3>📍 Osmanabad Dropping Points</h3>
+                <ul class="point-list">
+                    <li><span>Barshi</span> <span>05:00</span></li>
+                    <li><span>Chikarda</span> <span>05:30</span></li>
+                    <li><span>Khanapur</span> <span>06:15</span></li>
+                    <li><span>Dharashiv Bus Stop</span> <span>06:30</span></li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- H2: Why Choose Alfabus Section -->
+    <section class="section-container bg-white">
+        <h2 class="section-title">Why Choose Alfabus for Pune to Osmanabad Travel?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon-circle">🛣️</div>
+                <h3>Distance & Speed</h3>
+                <p>Covering the 260 km route efficiently in 5 to 6 hours with dedicated highway routing.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-circle">💺</div>
+                <h3>Clean & Modern Fleet</h3>
+                <p>Choose from sanitized AC Sleepers and Seaters with charging points, reading lights, and fresh linens.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-circle">⚡</div>
+                <h3>Instant Live Tracking</h3>
+                <p>Track your bus location in real-time via the Alfabus app and get exact arrival alerts for your boarding point.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- H2: FAQ Section -->
+    <section class="section-container bg-light">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>What is the duration of the bus journey from Pune to Osmanabad?</h3>
+                <p>The travel time between Pune and Osmanabad is approximately 5 to 6 hours depending on traffic conditions and your exact boarding location in Pune.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the starting ticket price for a Pune to Osmanabad bus on Alfabus?</h3>
+                <p>Bus ticket fares start at ₹450 for Non-AC options and ₹550 for AC Sleeper services when booked directly via the Alfabus app.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I select my boarding point while booking tickets?</h3>
+                <p>Yes, you can choose from various boarding points across Pune including Wakad, Swargate, Shivaji Nagar, and Hadapsar during checkout.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action -->
     <section class="cta">
         <h2>Ready to book your Pune to Osmanabad trip?</h2>
         <p style="font-size: 18px; opacity: 0.9; margin-bottom: 35px;">Join thousands of happy travelers booking their daily commutes and holiday trips on Alfabus.</p>
